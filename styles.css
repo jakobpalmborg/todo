@@ -23,3 +23,6 @@ button {
     border: 0;
 }
 
+.line {
+    text-decoration: line-through;
+}

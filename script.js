@@ -36,12 +36,12 @@ function addTodo(todo) {
 
 function checkTodo(e) {
   let item = e.target.parentNode;
-  if (item.style.textDecoration == "line-through") {
-    item.style.textDecoration = "none";
-    takeAwayTask();
-  } else {
-    item.style.textDecoration = "line-through";
+  if (item.className == "") {
+    item.className = "line";
     addNumberOfTask();
+  } else {
+    item.className = "";
+    takeAwayTask();
   }
 }
 
@@ -72,48 +72,16 @@ function clearAll() {
 
 
 
+//Old function
+// function checkTodo(e) {
+//   let item = e.target.parentNode;
+//   if (item.style.textDecoration == "line-through") {
+//     item.style.textDecoration = "none";
+//     takeAwayTask();
+//   } else {
+//     item.style.textDecoration = "line-through";
+//     addNumberOfTask();
+//   }
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*const todoInput = document.querySelector(".todo-input");
-const todoButton = document.querySelector(".todo-button");
-const todoList = document.querySelector(".todo-list");
-
-todoButton.addEventListener('click', addTodo);
-
-function addTodo(event) {
-    event.preventDefault();
-    const todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo");
-    const newTodo = document.createElement('li');
-    newTodo.classList.add('todo-item');
-    todoDiv.appendChild(newTodo);
-    
-    const completedButton = document.createElement('button');
-    completedButton.innerHTML = 'completed'
-    completedButton.classList.add("completedButton");
-    todoDiv.appendChild(completedButton);
-
-    const trashButton = document.createElement('button');
-    trashButton.innerHTML = 'trash'
-    trashButton.classList.add("trashButton");
-    todoDiv.appendChild(trashButton);
-
-    todoList.appendChild(todoDiv);
-}
-
-*/
