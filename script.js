@@ -24,8 +24,8 @@ function addTodo(todo) {
   let li = document.createElement("li");
   li.innerHTML = `
         <span class="todo-item">${todo}</span>
-        <button name="checkButton"><img src="check2.png" alt="check icon"></button>
-        <button name="deleteButton"><img src="trash.png" alt="trash icon"></button>
+        <button name="checkButton">&#10003;</button>
+        <button name="deleteButton">&#10005;</button>
     `;
   ul.appendChild(li);
 
