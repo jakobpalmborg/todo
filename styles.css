@@ -2,35 +2,135 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+       /* border: 1px solid red; */      
 }
 
+/* || VARIABLES  */
+
+:root {
+    --light-color: #fec859;
+    --dark-color: #331a38;
+    --alt-color: #43b5a0;
+    --dark2-color: #491d88;
+    --light2-color: #fa448c;
+}
+    
+html {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25rem;
+    }
+
+body {
+    background: linear-gradient(var(--light2-color), var(--alt-color));
+    , --light2-color)) ;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 7px;
+    color: var(--dark2-color);
+}
+
+main {
+    background-color: var(--dark-color);
+    border-radius: 7px;
+    transform: rotate(-3deg);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: var(--dark2-color);
+    border-radius: 7px;
+    transform: rotate(3deg);
+    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: var(--dark2-color);
+    border-radius: 7px;
+    transform: rotate(180deg);
+    transform: scaleX(-1 -1);
+
+}
+
+
 h1 {
-    color: goldenrod;
+    color: var(--light-color);
+
 }
 
 p {
-    display: inline;
+    color: var(--light-color);
 }
-
-#clearAll {
-    display: block;
-    margin-top: 25px;
-}
-
-img {
-    height: 1.5rem;
-    position: relative;
-    z-index: -1;
-    
- }
 
 button {
     background-color: transparent;
-    border-radius: 50px;
-    border: 0;
-   }
+    border: none;
+}
+
+form {
+    transform: rotate(3deg);
+}
+
+.todo-list {
+    background-color: var(--light-color);
+    color: #var(--dark-color);
+    padding-left: 25%;
+    padding-right: 25%;
+    border-radius: 7px;
+    transform: rotate(3deg);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 1rem;
+}
 
 .line {
     text-decoration: line-through;
 }
+
+.clearAll {
+    color: var(--light-color);
+}
+
+.completed {
+    color: var(--light-color);
+}
+
+.todo-button {
+    color: var(--light-color);
+}
+
+.todo-input {
+    background-color: var(--light-color);
+}
+
+/* .todo-button {
+    transform: rotate(3deg);
+} */
+
+.fa-plus:hover, .fa-skull-crossbones:hover {
+    color: var(--alt-color);
+}
+
+.fa-plus:active, .fa-skull-crossbones:active {
+    color: var(--light2-color);
+}
+
+
+
+/* img {
+    height: 1.5rem;
+    position: relative;
+    z-index: -1;
+    
+ } */
 
