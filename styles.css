@@ -18,7 +18,7 @@
 html, body {
     height: 100vh;
     }
-    
+
 html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
@@ -26,8 +26,8 @@ html {
 
 body {
     background: linear-gradient(var(--light2-color), var(--alt-color));
-    padding: 1.5rem;
-    margin: 1rem;
+    padding: 0;
+    margin 0;
     border-radius: 7px;
     color: var(--dark2-color);
 }
@@ -82,7 +82,7 @@ form {
 
 .todo-list {
     background-color: var(--light-color);
-    color: #var(--dark-color);
+    color: var(--dark-color);
     padding-left: 25%;
     padding-right: 25%;
     border-radius: 7px;
@@ -116,10 +116,6 @@ form {
     background-color: var(--light-color);
 }
 
-/* .todo-button {
-    transform: rotate(3deg);
-} */
-
 .fa-plus:hover, .fa-skull-crossbones:hover {
     color: var(--alt-color);
 }
@@ -128,12 +124,9 @@ form {
     color: var(--light2-color);
 }
 
-
-
-/* img {
-    height: 1.5rem;
-    position: relative;
-    z-index: -1;
-    
- } */
-
+@media screen and (min-width:768px) {
+body {
+    padding: 1.5rem;
+    margin: 1rem;
+}
+}
