@@ -14,6 +14,10 @@
     --dark2-color: #491d88;
     --light2-color: #fa448c;
 }
+
+html, body {
+    height: 100vh;
+    }
     
 html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -22,7 +26,6 @@ html {
 
 body {
     background: linear-gradient(var(--light2-color), var(--alt-color));
-    , --light2-color)) ;
     padding: 1.5rem;
     margin: 1rem;
     border-radius: 7px;
