@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-       /* border: 1px solid red; */      
+    /* border: 1px solid red; */ 
 }
 
 /* || VARIABLES  */
@@ -27,7 +27,7 @@ html {
 body {
     background: linear-gradient(var(--light2-color), var(--alt-color));
     padding: 0;
-    margin 0;
+    margin: 0;
     border-radius: 7px;
     color: var(--dark2-color);
 }
@@ -118,10 +118,21 @@ form {
 
 .fa-plus:hover, .fa-skull-crossbones:hover {
     color: var(--alt-color);
+    cursor: pointer;
 }
 
 .fa-plus:active, .fa-skull-crossbones:active {
     color: var(--light2-color);
+}
+
+.links ul {
+    list-style: none;
+    color: var(--light-color);
+}
+
+a:hover {
+    cursor: pointer;
+   
 }
 
 @media screen and (min-width:768px) {
@@ -130,3 +141,6 @@ body {
     margin: 1rem;
 }
 }
+
+
+

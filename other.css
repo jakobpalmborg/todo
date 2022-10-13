@@ -1,0 +1,116 @@
+* {
+    /* border: 2px solid red;  */
+    margin: 0;
+}
+
+html {
+    background: #243c50;
+    font-size: 1.2rem;
+}
+
+main {
+    border-radius: 3px;
+}
+
+Header {
+    display: flex;
+    place-content: center;  
+    background-color: #1b2838;  
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+h1 {
+    color: #c7d5e0;
+}
+
+p {
+    color: #c7d5e0;
+}
+
+footer p {
+      display: none;
+}
+
+input {
+    background: #384a5c;
+    width: 100%;
+    color: #c7d5e0;
+    height: 2rem;
+    border-radius: 3px;
+}
+
+li {
+    color: #c7d5e0;
+    background-color:#384a5c;
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;
+    align-items: center;
+    margin: 0.2rem;
+    border-radius: 3px;
+    margin-right: 2.2rem;
+    padding-left: 0.3rem;
+}
+
+button {
+    background: #737f8a;
+    border: none;
+    color: #1b2838;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+footer {
+    padding-bottom: 100vh;
+}
+
+ul {
+    margin-top: 1rem;
+    width: 100%;
+    list-style: none;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.todo-container {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 100%;
+}
+
+.todo-container, .completed, .clear-container, .links, footer  {
+    background: #1b2838;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    padding-bottom: 1rem;
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+.clear-container {
+    display: none;
+}
+
+.fa-check-double {
+   color: #c7d5e0; 
+}
+
+.checkBtn, .deleteBtn {
+    margin: 0.5rem;
+    border-radius: 3px;
+   }
+
