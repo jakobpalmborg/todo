@@ -96,7 +96,7 @@ form {
     margin: 1rem;
 }
 
-.line {
+.line span {
     text-decoration: line-through;
 }
 

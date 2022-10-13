@@ -97,7 +97,7 @@ form {
     padding-bottom: 1rem;
 }
 
-.line {
+.line span {
     text-decoration: line-through;
 }
 
