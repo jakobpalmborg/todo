@@ -15,11 +15,6 @@
     --light2-color: #fa428c;
 }
 
-html, body {
-    height: 110vh;
-    
-    }
-
 html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
@@ -29,10 +24,11 @@ html {
 body {
     background: linear-gradient(var(--light2-color), var(--alt-color));
     background-repeat: no-repeat;
-    padding: 0;
-    margin: 0;
-    
+    padding: 0.5rem;
+    margin: 0.5rem;
     color: var(--dark2-color);
+    /* border: 10px double var(--dark-color); */
+    height: 100vh;
 }
 
 main {
@@ -40,7 +36,8 @@ main {
     border-radius: 7px;
     transform: rotate(-3deg);
     animation: main-drop 4s;
-}
+    min-height: 75vh;
+    }
 
 header {
     display: flex;
@@ -67,6 +64,19 @@ li {
     padding: 0.2rem;
 }
 
+input {
+    border-radius: 25px;
+    height: 2rem;
+    width: 50vw;
+    font-size: 1rem;
+    padding-left: 1rem;
+    color: var(--dark-color);
+    animation: input-animation 8.8s;
+    }
+
+
+
+
 h1 {
     margin-top:-200px;
     color: var(--light-color);
@@ -86,7 +96,7 @@ button {
 
 form {
     transform: rotate(3deg);
-}
+    }
 
 .todo-list {
     background-color: var(--light-color);
@@ -185,14 +195,6 @@ li button {
 }
 
 
-@media screen and (min-width:768px) {
-body {
-    padding: 1.5rem;
-    margin: 1rem;
-}
-}
-
- 
 @keyframes footer-drop {
     0% {
         margin-top: -800px;
@@ -260,4 +262,124 @@ body {
         transform: rotate(-3deg);
         color: var(--light-color)
     }
-} 
+}
+
+@keyframes input-animation {
+    0% {
+        width: 0px;
+        height: 0px;
+                
+    }
+    90% {
+        width: 0px;
+        height: 0px;
+    }
+ 
+    100% {
+        width: 50vw;
+        height: 2rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+body {
+    padding: 1.5rem;
+    margin: 1rem;
+}
+@keyframes input-animation {
+    0% {
+        width: 0px;
+        height: 0px;
+                
+    }
+    90% {
+        width: 0px;
+        height: 0px;
+    }
+ 
+    100% {
+        width: 50vw;
+        height: 2rem;
+    }
+}
+}
+
+@media screen and (min-width:1024px) {
+    body {
+      margin-left:15%;
+      margin-right: 15%;
+    }
+    input {
+        width: 40vw;
+    }
+    @keyframes input-animation {
+        0% {
+            width: 0px;
+            height: 0px;
+                    
+        }
+        90% {
+            width: 0px;
+            height: 0px;
+        }
+     
+        100% {
+            width: 40vw;
+            height: 2rem;
+        }
+    }
+    }
+
+@media screen and (min-width:1280px) {
+        body {
+          margin-left:20%;
+          margin-right: 20%;
+        }
+        input {
+            width: 30vw;
+        }
+        @keyframes input-animation {
+            0% {
+                width: 0px;
+                height: 0px;
+                        
+            }
+            90% {
+                width: 0px;
+                height: 0px;
+            }
+         
+            100% {
+                width: 30vw;
+                height: 2rem;
+            }
+        }
+        }
+
+@media screen and (min-width:1536px) {
+            body {
+              margin-left:25%;
+              margin-right: 25%;
+            }
+            input {
+                width: 20vw;
+            }
+            @keyframes input-animation {
+                0% {
+                    width: 0px;
+                    height: 0px;
+                            
+                }
+                90% {
+                    width: 0px;
+                    height: 0px;
+                }
+             
+                100% {
+                    width: 20vw;
+                    height: 2rem;
+                }
+            }
+            }
+
+ 
