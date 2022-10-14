@@ -102,8 +102,8 @@ form {
 }
 
 .clear-container {
-    display: none;
-}
+    height: 2rem;
+} 
 
 .fa-check-double {
    color: #c7d5e0; 

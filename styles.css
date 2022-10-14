@@ -12,23 +12,26 @@
     --dark-color: #331a38;
     --alt-color: #43b5a0;
     --dark2-color: #491d88;
-    --light2-color: #fa448c;
+    --light2-color: #fa428c;
 }
 
 html, body {
-    height: 100vh;
+    height: 110vh;
+    
     }
 
 html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
+    
     }
 
 body {
     background: linear-gradient(var(--light2-color), var(--alt-color));
+    background-repeat: no-repeat;
     padding: 0;
     margin: 0;
-    border-radius: 7px;
+    
     color: var(--dark2-color);
 }
 
@@ -36,6 +39,7 @@ main {
     background-color: var(--dark-color);
     border-radius: 7px;
     transform: rotate(-3deg);
+    animation: main-drop 4s;
 }
 
 header {
@@ -46,7 +50,7 @@ header {
     background-color: var(--dark2-color);
     border-radius: 7px;
     transform: rotate(3deg);
-    
+    animation: header-drop 4s;
 }
 
 footer {
@@ -56,15 +60,19 @@ footer {
     margin: 1rem;
     background-color: var(--dark2-color);
     border-radius: 7px;
-    transform: rotate(180deg);
-    transform: scaleX(-1 -1);
-
+    animation: footer-drop 4s cubic-bezier(0.25, 0.1, 0.58, 1.65) forwards;
 }
 
+li {
+    padding: 0.2rem;
+}
 
 h1 {
+    margin-top:-200px;
     color: var(--light-color);
-
+    animation: h1-drop 5s forwards;
+    animation-delay: 3.8s;
+    transform: rotate(-3deg);
 }
 
 p {
@@ -102,6 +110,7 @@ form {
 
 .clearAll {
     color: var(--light-color);
+    scale: 150%;
 }
 
 .completed {
@@ -110,19 +119,50 @@ form {
 
 .todo-button {
     color: var(--light-color);
+    scale: 150%;
 }
 
 .todo-input {
     background-color: var(--light-color);
 }
 
+.checkBtn, .deleteBtn {
+    transition: transform 0.3s;
+    transform: rotate(0deg);
+}
+
+.checkBtn:hover, .deleteBtn:hover {
+    cursor: pointer;
+    color: var(--alt-color);
+}
+
+.checkBtn:active, .deleteBtn:active {
+    cursor: pointer;
+    color: var(--alt-color);
+    transform: scale(140%);
+    color: var(--light2-color);
+}
+
+.fa-plus {
+    transition: transform 1s;
+    transform: rotate(0deg);
+    margin-left: 0.3rem;
+}
+
+.fa-skull-crossbones {
+    transition: transform 1s;
+    transform: rotate(0deg);
+}
+
 .fa-plus:hover, .fa-skull-crossbones:hover {
     color: var(--alt-color);
     cursor: pointer;
+    transform: rotate(360deg);
 }
 
-.fa-plus:active, .fa-skull-crossbones:active {
+.fa-plus:active, .fa-skull-crossbones:active  {
     color: var(--light2-color);
+    transform: scale(200%)
 }
 
 .links ul {
@@ -132,8 +172,18 @@ form {
 
 a:hover {
     cursor: pointer;
-   
+    color: var(--alt-color);
 }
+
+li button {
+    scale: 150%;
+    margin-left:0.8rem;
+   }
+
+.fa-check-double {
+    margin-right: 0.3rem;
+}
+
 
 @media screen and (min-width:768px) {
 body {
@@ -142,5 +192,72 @@ body {
 }
 }
 
+ 
+@keyframes footer-drop {
+    0% {
+        margin-top: -800px;
+        background-color: var(--dark2-color)
+    }
+        33% {
+        background-color: var(--light2-color);
+    }
+    66% {
+        background-color: var(--alt-color);
+    }
+    100% {
+        transform: rotate(180deg);
+        transform: scaleX(-1 -1);
+        background-color: var(--dark2-color);
+     } 
+}
 
+@keyframes main-drop {
+    0% {
+        margin-top: -700px;
+        border-radius: 50%;
+    }
+    90% {
+        border-radius: 50%;
+    }
+    100% {
+        margin-top: 0px;
+        border-radius: 7px;
+    }
+}
 
+@keyframes header-drop {
+    0% {
+        margin-top: -200px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes h1-drop {
+    0% {
+        margin-top: -200px;
+        margin-left: -80vw;
+                }
+    10% {
+        margin-top: 0px;
+        transform: scale(.1) rotate(-80deg);
+    }
+    70% {
+        color: var(--light-color);
+    }
+    80% {
+        transform: scale(1) rotate(10deg);
+        color: var(--alt-color);
+       
+    }    
+    90% {
+        transform: rotate(-10deg);
+        color: var(--light2-color);
+    }
+    100% {
+        margin-top: 0px;
+        transform: rotate(-3deg);
+        color: var(--light-color)
+    }
+} 
