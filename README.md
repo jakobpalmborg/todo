@@ -1,2 +1,3 @@
 # todo
-Todo-list
+
+Assignment from my Education to build a TODO-list and experiment with CSS.
